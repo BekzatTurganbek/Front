@@ -17,9 +17,9 @@ export class AuthService {
 
   private _loggedInUser: any;
   private authToken: string | null = null;
-  
+
   login(username: string, password: string): Observable<any> {
-    return this.http.post<any>('http://localhost:8080/login', { username, password });
+    return this.http.post<any>(`${this.apiServerUrl}/login`, { username, password });
   }
 
 
@@ -99,12 +99,12 @@ export class AuthService {
 
 
 
-  
+
 
 
   // getCoursesSelectedByUser(userId: number): Observable<Course[]> {
   //   return this.http.get<Course[]>(`http://localhost:8080/users/${userId}/courses`);
   // }
-  
+
 
 }

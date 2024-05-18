@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../service/AuthService';
 
+localStorage.setItem('userId', '3');
 @Component({
   selector: 'app-teacher',
   templateUrl: './teacher.component.html',
@@ -9,7 +10,7 @@ import { AuthService } from '../../service/AuthService';
 export class TeacherComponent implements OnInit {
   courses: any[];
   userId: number;
-  
+
   constructor(private userService: AuthService) { }
 
   ngOnInit() {
